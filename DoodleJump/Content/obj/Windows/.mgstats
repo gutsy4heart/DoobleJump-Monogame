@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/butke/Desktop/DAE/coding stuff/DoodleJump/DoodleJump/Content/File.spritefont","C:/Users/butke/Desktop/DAE/coding stuff/DoodleJump/DoodleJump/Content/bin/Windows/File.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21529,0.1466766
+"C:/Users/butke/Desktop/DAE/coding stuff/DoodleJump/DoodleJump/Content/Hero/hero.png","C:/Users/butke/Desktop/DAE/coding stuff/DoodleJump/DoodleJump/Content/bin/Windows/Hero/hero.xnb","TextureProcessor","Texture2DContent",1690309,4194389,0.3122872

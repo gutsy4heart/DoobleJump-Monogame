@@ -1,0 +1,59 @@
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\mgcb.tool.restore
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.csproj.AssemblyReference.cache
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.AssemblyInfoInputs.cache
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.AssemblyInfo.cs
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.csproj.CoreCompileInputs.cache
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.exe
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.deps.json
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.runtimeconfig.json
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.pdb
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\MonoGame.Framework.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Direct2D1.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Direct3D11.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Direct3D9.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.DXGI.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Mathematics.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.MediaFoundation.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.XAudio2.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.XInput.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.csproj.Up2Date
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\refint\DoodleJump.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.pdb
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.genruntimeconfig.cache
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\ref\DoodleJump.dll
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\Content\Hero\hero.xnb
+C:\Users\butke\Desktop\DAE\coding stuff\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\Content\File.xnb
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\Content\File.xnb
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\Content\Hero\hero.xnb
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.exe
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.deps.json
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.runtimeconfig.json
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\DoodleJump.pdb
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\MonoGame.Framework.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Direct2D1.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Direct3D11.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Direct3D9.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.DXGI.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.Mathematics.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.MediaFoundation.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.XAudio2.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\SharpDX.XInput.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\mgcb.tool.restore
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.AssemblyInfo.cs
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.sourcelink.json
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.csproj.Up2Date
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\refint\DoodleJump.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.pdb
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.genruntimeconfig.cache
+C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\ref\DoodleJump.dll
