@@ -94,6 +94,7 @@ namespace DoodleJump
         public static Texture2D MovingPlatformTexture;
         public static Texture2D DisappearingPlatformTexture;
         public static Texture2D SpringPlatformTexture;
+        public static Texture2D BombTexture;
 
         public static readonly Random Rng = new Random();
 
@@ -137,11 +138,42 @@ namespace DoodleJump
             DisappearingPlatformTexture = CreatePlatformTexture(GraphicsDevice, 80, 16, Color.White, Color.LightGray);
             SpringPlatformTexture = CreatePlatformTexture(GraphicsDevice, 80, 16, Color.Red, Color.DarkRed);
 
+            // LOAD BOMB PNG (runtime file in Content/bomb.png)
+            // This avoids MGCB changes: just copy the png to output.
+            try
+            {
+                using var s = TitleContainer.OpenStream("Content/bomb.png");
+                BombTexture = Texture2D.FromStream(GraphicsDevice, s);
+            }
+            catch
+            {
+                BombTexture = CreateFallbackBombTexture(GraphicsDevice);
+            }
+
             highScoreManager = new HighScoreManager("highscores.txt");
             screenManager = new ScreenManager(highScoreManager);
             screenManager.Setup();
 
             GameSettings.CurrentScore = 0;
+        }
+
+        static Texture2D CreateFallbackBombTexture(GraphicsDevice device)
+        {
+            int size = 32;
+            Texture2D tex = new Texture2D(device, size, size);
+            Color[] data = new Color[size * size];
+            for (int y = 0; y < size; y++)
+            {
+                for (int x = 0; x < size; x++)
+                {
+                    float dist = Vector2.Distance(new Vector2(x, y), new Vector2(size / 2f, size / 2f));
+                    if (dist < size / 2f - 2) data[y * size + x] = Color.DarkGray;
+                    else if (dist < size / 2f) data[y * size + x] = Color.Black;
+                    else data[y * size + x] = Color.Transparent;
+                }
+            }
+            tex.SetData(data);
+            return tex;
         }
 
         Texture2D CreatePlatformTexture(GraphicsDevice device, int width, int height, Color topColor, Color bottomColor)
@@ -650,6 +682,9 @@ namespace DoodleJump
                         Position.Y = p.Bounds.Top - Size.Y;
                         p.OnPlayerJump(this);
 
+                        // Bombs spawn on the platform you just landed on
+                        screen.SpawnBombOnPlatform(p);
+
                         Combo.OnJump(gameTime);
 
                         Color jumpColor = p is SpringPlatform ? Color.Orange : Color.LightBlue;
@@ -725,6 +760,7 @@ namespace DoodleJump
     public abstract class Platform : GameObject
     {
         public bool IsActive = true;
+        public bool HasBomb = false; // prevents multiple bombs on same platform
         protected Texture2D texture;
 
         public Platform(float x, float y)
@@ -872,6 +908,7 @@ namespace DoodleJump
         public List<PowerUp> PowerUps = new List<PowerUp>();
         public List<Coin> Coins = new List<Coin>();
         public List<Boss> Bosses = new List<Boss>();
+        public List<Bomb> Bombs = new List<Bomb>();
 
         ParallaxBackground background;
         public ParticleSystem particleSystem;
@@ -910,6 +947,7 @@ namespace DoodleJump
             PowerUps.Clear();
             Coins.Clear();
             Bosses.Clear();
+            Bombs.Clear();
 
             CameraY = 0f;
             IsGameOver = false;
@@ -995,6 +1033,32 @@ namespace DoodleJump
             return new SpringPlatform(x, y);
         }
 
+        public void SpawnBombOnPlatform(Platform platform)
+        {
+            if (platform == null || !platform.IsActive || platform.HasBomb)
+                return;
+
+            // Difficulty increases with height: more bombs the higher you go.
+            float height = Math.Max(0f, -platform.Position.Y);
+            float d = MathHelper.Clamp(height / 6000f, 0f, 1f);
+            float chance = MathHelper.Lerp(0.05f, 0.35f, d); // 5% -> 35%
+
+            if (rnd.NextDouble() > chance)
+                return;
+
+            // Prevent overload
+            const int maxBombs = 12;
+            if (Bombs.Count >= maxBombs)
+            {
+                var oldest = Bombs[0];
+                if (oldest.Parent != null) oldest.Parent.HasBomb = false;
+                Bombs.RemoveAt(0);
+            }
+
+            platform.HasBomb = true;
+            Bombs.Add(new Bomb(platform));
+        }
+
         public override void Update(GameTime gt)
         {
             UpdateInputStates();
@@ -1057,6 +1121,19 @@ namespace DoodleJump
             Coins.RemoveAll(c => c.Position.Y > CameraY + ViewHeight + 200);
             Bosses.RemoveAll(b => b.Health <= 0 || b.Position.Y > CameraY + ViewHeight + 200);
 
+            // Bomb cleanup (keep platform flag consistent)
+            for (int i = Bombs.Count - 1; i >= 0; i--)
+            {
+                var bomb = Bombs[i];
+                bool parentGone = bomb.Parent == null || !bomb.Parent.IsActive;
+                bool farBelow = (bomb.Parent != null && bomb.Parent.Position.Y > CameraY + ViewHeight + 240);
+                if (parentGone || farBelow)
+                {
+                    if (bomb.Parent != null) bomb.Parent.HasBomb = false;
+                    Bombs.RemoveAt(i);
+                }
+            }
+
             float currentHeight = -Player.Position.Y;
             if (currentHeight - lastBossSpawnHeight >= bossSpawnInterval)
             {
@@ -1098,6 +1175,9 @@ namespace DoodleJump
 
             foreach (var platform in Platforms)
                 platform.Update(gt, this);
+
+            foreach (var bomb in Bombs)
+                bomb.Update(gt, this);
 
             foreach (var enemy in Enemies)
             {
@@ -1146,6 +1226,28 @@ namespace DoodleJump
                         GameOver();
                     else
                         Obstacles.Remove(obstacle);
+                    break;
+                }
+            }
+
+            // Bombs
+            foreach (var bomb in Bombs.ToList())
+            {
+                if (!bomb.IsArmed)
+                    continue;
+
+                if (bomb.CheckCollision(Player))
+                {
+                    if (!Player.HasInvincibility && !Player.HasShield)
+                    {
+                        GameOver();
+                    }
+                    else
+                    {
+                        // Shield / invincibility destroys the bomb
+                        if (bomb.Parent != null) bomb.Parent.HasBomb = false;
+                        Bombs.Remove(bomb);
+                    }
                     break;
                 }
             }
@@ -1266,6 +1368,10 @@ namespace DoodleJump
             foreach (var p in Platforms)
                 if (p.Position.Y >= CameraY - 100 && p.Position.Y <= CameraY + ViewHeight + 100)
                     p.Draw(sb, pixel);
+
+            foreach (var bomb in Bombs)
+                if (bomb.Position.Y >= CameraY - 150 && bomb.Position.Y <= CameraY + ViewHeight + 150)
+                    bomb.Draw(sb, pixel);
 
             foreach (var enemy in Enemies)
                 if (enemy.Position.Y >= CameraY - 100 && enemy.Position.Y <= CameraY + ViewHeight + 100)
@@ -1583,6 +1689,55 @@ namespace DoodleJump
 
         public override void Draw(SpriteBatch sb, Texture2D pixel) => sb.Draw(texture, Bounds, Color.White);
         public bool CheckCollision(Player player) => Bounds.Intersects(player.Bounds);
+    }
+
+    // ================= BOMB (spawns on landed platform) =================
+    public class Bomb : GameObject
+    {
+        public Platform Parent { get; private set; }
+        float armTimer = 0.25f; // small grace period
+        float pulse = 0f;
+
+        public bool IsArmed => armTimer <= 0f;
+
+        public Bomb(Platform parent)
+        {
+            Parent = parent;
+            Size = new Vector2(28, 28);
+            UpdatePositionFromParent();
+        }
+
+        void UpdatePositionFromParent()
+        {
+            if (Parent == null) return;
+            Position = new Vector2(
+                Parent.Position.X + Parent.Size.X / 2f - Size.X / 2f,
+                Parent.Position.Y - Size.Y + 2f
+            );
+        }
+
+        public override void Update(GameTime gt, PlayScreen screen)
+        {
+            float dt = (float)gt.ElapsedGameTime.TotalSeconds;
+            armTimer -= dt;
+            pulse += dt * 8f;
+            if (pulse > MathHelper.TwoPi) pulse -= MathHelper.TwoPi;
+
+            // Follow platform (moving platforms)
+            UpdatePositionFromParent();
+        }
+
+        public override void Draw(SpriteBatch sb, Texture2D pixel)
+        {
+            var tex = Game1.BombTexture ?? pixel;
+            float a = IsArmed ? (float)(Math.Sin(pulse) * 0.25 + 0.75) : 0.65f;
+            sb.Draw(tex, Bounds, Color.White * a);
+        }
+
+        public bool CheckCollision(Player player)
+        {
+            return Bounds.Intersects(player.Bounds);
+        }
     }
 
     // ================= POWER-UP =================

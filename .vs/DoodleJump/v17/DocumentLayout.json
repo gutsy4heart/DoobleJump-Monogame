@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\DoodleJump\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|c:\\users\\user\\desktop\\doodlejump\\doodlejump\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|solutionrelative:doodlejump\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|c:\\users\\user\\desktop\\doodlejump\\doodlejump\\doodlejump.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|solutionrelative:doodlejump\\doodlejump.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|c:\\users\\user\\desktop\\doodlejump\\doodlejump\\content\\file.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|solutionrelative:doodlejump\\content\\file.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|c:\\users\\user\\desktop\\doodlejump\\doodlejump\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|solutionrelative:doodlejump\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|c:\\users\\user\\desktop\\doodlejump\\doodlejump\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D12DED-FFF4-4FB4-A089-25DF5BB67D02}|DoodleJump\\DoodleJump.csproj|solutionrelative:doodlejump\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\Program.cs",
+              "RelativeDocumentMoniker": "DoodleJump\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\Program.cs",
+              "RelativeToolTip": "DoodleJump\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:41:39.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\Game1.cs",
               "RelativeDocumentMoniker": "DoodleJump\\Game1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\Game1.cs",
               "RelativeToolTip": "DoodleJump\\Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHEKAAAAAAAAAAA0wHgKAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T09:58:27.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DoodleJump.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\DoodleJump.csproj",
               "RelativeDocumentMoniker": "DoodleJump\\DoodleJump.csproj",
               "ToolTip": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\DoodleJump.csproj",
               "RelativeToolTip": "DoodleJump\\DoodleJump.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAjwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-01-12T09:33:32.915Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "File.spritefont",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\Content\\File.spritefont",
-              "RelativeDocumentMoniker": "DoodleJump\\Content\\File.spritefont",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DoodleJump\\DoodleJump\\Content\\File.spritefont",
-              "RelativeToolTip": "DoodleJump\\Content\\File.spritefont",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-18T13:58:43.675Z"
             }
           ]
         }

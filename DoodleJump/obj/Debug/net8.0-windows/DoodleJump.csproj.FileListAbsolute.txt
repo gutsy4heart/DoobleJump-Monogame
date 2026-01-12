@@ -57,3 +57,4 @@ C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\refint\Dood
 C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.pdb
 C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\DoodleJump.genruntimeconfig.cache
 C:\Users\User\Desktop\DoodleJump\DoodleJump\obj\Debug\net8.0-windows\ref\DoodleJump.dll
+C:\Users\User\Desktop\DoodleJump\DoodleJump\bin\Debug\net8.0-windows\Content\bomb.png
